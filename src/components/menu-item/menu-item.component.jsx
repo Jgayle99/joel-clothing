@@ -10,9 +10,8 @@ import {
   ContentSubtitle
 } from './menu-item.styles.jsx';
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
-    console.log(size);
-    return (
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
+
   <MenuItemContainer
     size={size}
     onClick={() => history.push(`${match.url}${linkUrl}`)}
@@ -27,6 +26,5 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
     </ContentContainer>
   </MenuItemContainer>
 );
-}
 
 export default withRouter(MenuItem);
